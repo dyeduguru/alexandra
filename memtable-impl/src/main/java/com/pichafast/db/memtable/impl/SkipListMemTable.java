@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import com.pichafast.db.KeyNotFoundException;
 import com.pichafast.db.storage.StorageTable;
 import java.util.concurrent.ConcurrentSkipListMap;
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 
 public class SkipListMemTable implements StorageTable {
@@ -28,7 +29,12 @@ public class SkipListMemTable implements StorageTable {
     if (!hasKey(key)) {
       throw new KeyNotFoundException();
     } else {
-      return map.get(toHex(key)).getBytes();
+      String bytes = map.get(toHex(key));
+      try {
+        return Hex.decodeHex(bytes);
+      } catch (DecoderException e) {
+        throw new RuntimeException("unable to decode value", e);
+      }
     }
   }
 

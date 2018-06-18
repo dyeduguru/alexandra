@@ -1,4 +1,5 @@
 rootProject.name = 'alexandra'
 
+include 'foundation'
 include 'memtable-api'
 include 'memtable-impl'
