@@ -1,0 +1,4 @@
+rootProject.name = 'alexandra'
+
+include 'memtable-api'
+include 'memtable-impl'
