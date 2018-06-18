@@ -1,7 +1,7 @@
-package com.pichafast.db;
+package com.pichafast.db.sstable;
 
 public interface SSTableManager {
-    SSTable add(String path);
+    void add(SSTable path);
 
     void runCompaction();
 }
