@@ -1,0 +1,7 @@
+apply from: "${rootDir}/gradle/javaproj.gradle"
+
+
+dependencies {
+    compile project(':memtable-api')
+    compile group: 'com.google.guava', name: 'guava', version: '25.1-jre'
+}
