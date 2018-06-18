@@ -1,7 +1,4 @@
-package com.pichafast.db;
-
-import com.pichafast.db.sstable.SSTable;
-import com.pichafast.db.sstable.SSTableManager;
+package com.pichafast.db.sstable;
 
 public class SSTableManagerImpl implements SSTableManager {
     @Override
