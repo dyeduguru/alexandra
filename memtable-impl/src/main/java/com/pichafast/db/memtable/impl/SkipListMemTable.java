@@ -19,9 +19,9 @@ public class SkipListMemTable implements StorageTable {
   private final ConcurrentSkipListMap<String, String> map;
   private final SSTableManager ssTableManager;
 
-  public SkipListMemTable() {
+  public SkipListMemTable(SSTableManager ssTableManager) {
     this.map = new ConcurrentSkipListMap<>();
-    this.ssTableManager = new SSTableManagerImpl();
+    this.ssTableManager = ssTableManager;
   }
 
   public void put(byte[] key, byte[] val) {
