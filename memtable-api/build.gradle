@@ -1,1 +1,6 @@
 apply from: "${rootDir}/gradle/javaproj.gradle"
+
+
+dependencies {
+    project (":foundation")
+}
