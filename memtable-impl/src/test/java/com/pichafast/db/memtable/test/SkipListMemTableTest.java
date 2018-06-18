@@ -1,6 +1,7 @@
 package com.pichafast.db.memtable.test;
 
 import com.pichafast.db.memtable.impl.SkipListMemTable;
+import com.pichafast.db.sstable.SSTableManagerImpl;
 import com.pichafast.db.storage.StorageTable;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,7 +13,7 @@ public class SkipListMemTableTest {
 
   @Before
   public void init() {
-    skipListStorageTable = new SkipListMemTable();
+    skipListStorageTable = new SkipListMemTable(new SSTableManagerImpl());
   }
 
   @Test
