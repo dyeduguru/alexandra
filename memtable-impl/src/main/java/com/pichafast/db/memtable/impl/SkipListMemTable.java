@@ -2,11 +2,11 @@ package com.pichafast.db.memtable.impl;
 
 import com.google.common.base.Preconditions;
 import com.pichafast.db.KeyNotFoundException;
-import com.pichafast.db.memtable.MemTable;
+import com.pichafast.db.storage.StorageTable;
 import java.util.concurrent.ConcurrentSkipListMap;
 import org.apache.commons.codec.binary.Hex;
 
-public class SkipListMemTable implements MemTable {
+public class SkipListMemTable implements StorageTable {
 
   private final ConcurrentSkipListMap<String, String> map;
 

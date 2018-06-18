@@ -1,26 +1,26 @@
 package com.pichafast.db.memtable.test;
 
-import com.pichafast.db.memtable.MemTable;
 import com.pichafast.db.memtable.impl.SkipListMemTable;
+import com.pichafast.db.storage.StorageTable;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class SkipListMemTableTest {
 
-  private MemTable skipListMemTable;
+  private StorageTable skipListStorageTable;
 
   @Before
   public void init() {
-    skipListMemTable = new SkipListMemTable();
+    skipListStorageTable = new SkipListMemTable();
   }
 
   @Test
   public void testHasKey() {
     byte[] key = fromString("testKey");
     byte[] value = fromString("testValue");
-    skipListMemTable.put(key, value);
-    Assert.assertTrue(skipListMemTable.hasKey(key));
+    skipListStorageTable.put(key, value);
+    Assert.assertTrue(skipListStorageTable.hasKey(key));
   }
 
   @Test
@@ -28,8 +28,8 @@ public class SkipListMemTableTest {
     byte[] key = fromString("testKey");
     String testValue = "testValue";
     byte[] value = fromString(testValue);
-    skipListMemTable.put(key, value);
-    Assert.assertEquals(testValue, new String(skipListMemTable.get(key)));
+    skipListStorageTable.put(key, value);
+    Assert.assertEquals(testValue, new String(skipListStorageTable.get(key)));
   }
 
   private static byte [] fromString(String s) {

@@ -1,8 +1,8 @@
-package com.pichafast.db.memtable;
+package com.pichafast.db.storage;
 
 import com.pichafast.db.KeyNotFoundException;
 
-public interface MemTable {
+public interface StorageTable {
 
   void put(byte [] key, byte [] val);
 
