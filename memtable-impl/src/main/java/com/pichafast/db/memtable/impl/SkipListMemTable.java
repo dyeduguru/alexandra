@@ -1,6 +1,5 @@
 package com.pichafast.db.memtable.impl;
 
-import apple.laf.JRSUIUtils.Tree;
 import com.google.common.base.Preconditions;
 import com.pichafast.db.KeyNotFoundException;
 import com.pichafast.db.foundation.Row;
