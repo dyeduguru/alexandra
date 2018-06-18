@@ -1,4 +1,4 @@
-package com.pichafast;
+package com.pichafast.db;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
