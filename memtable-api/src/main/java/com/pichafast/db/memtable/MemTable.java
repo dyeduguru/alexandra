@@ -1,4 +1,6 @@
-package com.pichafast.db;
+package com.pichafast.db.memtable;
+
+import com.pichafast.db.KeyNotFoundException;
 
 public interface MemTable {
 
@@ -6,6 +8,6 @@ public interface MemTable {
 
   byte [] get(byte [] key) throws KeyNotFoundException;
 
-  byte [] hasKey(byte [] key);
+  boolean hasKey(byte [] key);
 
 }
