@@ -1,4 +1,4 @@
-package com.pichafast.db.sstable;
+package com.pichafast.db.sstable.impl;
 
 public interface SSTable {
     boolean isPresent(byte[] key);
